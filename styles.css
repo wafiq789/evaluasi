@@ -1,0 +1,201 @@
+/* Mengatur warna latar belakang untuk seluruh halaman */
+body {
+  background-color: #f0f8ff; /* Ganti dengan warna latar belakang yang diinginkan */
+  color: #333; /* Warna teks agar kontras dengan latar belakang */
+  font-family: Arial, sans-serif; /* Mengatur font halaman */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Mengatur margin dan padding di elemen lain untuk menghindari jarak kosong */
+html,
+body {
+  height: 100%;
+}
+
+section,
+.catalog,
+.book-item,
+.jumbotron {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+nav {
+  position: fixed; /* Membuat navbar tetap terlihat */
+  top: 0;
+  left: 0;
+  width: 99%; /* Memastikan navbar mengambil seluruh lebar */
+  z-index: 1000; /* Memastikan navbar berada di atas elemen lain */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0056b3;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan untuk efek */
+}
+
+nav .logo img {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Untuk menghindari konten tertutup oleh navbar */
+body {
+  padding-top: 60px; /* Menambahkan ruang sesuai tinggi navbar */
+}
+
+/* Jumbotron */
+.jumbotron {
+  background-color: #f0f8ff;
+  text-align: center;
+  padding: 50px 20px;
+  margin-bottom: 20px;
+}
+
+.jumbotron h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.jumbotron p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* About Section */
+#about {
+  padding: 20px;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+#about h2 {
+  color: #333;
+}
+/* Katalog Buku */
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #0056b3;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.book-item {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.book-item h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.book-item p {
+  font-size: 16px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.book-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Section */
+section#orders {
+  padding: 20px;
+}
+
+section#orders h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0056b3;
+  color: white;
+}
