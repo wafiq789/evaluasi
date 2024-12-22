@@ -68,7 +68,7 @@
     <!-- Orders Form -->
     <section id="orders">
       <h2>Formulir Pembelian</h2>
-      <form id="orderForm">
+      <form id="orderForm" name="responses" method="post">
         <label for="name">Nama:</label>
         <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required />
 
@@ -101,6 +101,16 @@
     </footer>
 
     <!-- Link to JS -->
-    <script src="script.js"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbytzu9wddy7cMBbV1Fs8RfevB1TRaHaPo1MreqSkcfXh3kIDfsRQ-s5q8CkTYmSJ3Hszw/exec";
+      const form = document.forms["responses"];
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
